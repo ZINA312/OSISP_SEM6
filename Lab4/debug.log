@@ -1,0 +1,133 @@
+9890  execve("./lab4", ["./lab4"], 0x7ffda621d688 /* 60 vars */) = 0
+9890  brk(NULL)                         = 0x6069f1bfd000
+9890  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x798260827000
+9890  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (Нет такого файла или каталога)
+9890  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+9890  fstat(3, {st_mode=S_IFREG|0644, st_size=66251, ...}) = 0
+9890  mmap(NULL, 66251, PROT_READ, MAP_PRIVATE, 3, 0) = 0x798260816000
+9890  close(3)                          = 0
+9890  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+9890  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+9890  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+9890  fstat(3, {st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0
+9890  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+9890  mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x798260600000
+9890  mmap(0x798260628000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x798260628000
+9890  mmap(0x7982607b0000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b0000) = 0x7982607b0000
+9890  mmap(0x7982607ff000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1fe000) = 0x7982607ff000
+9890  mmap(0x798260805000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x798260805000
+9890  close(3)                          = 0
+9890  mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x798260813000
+9890  arch_prctl(ARCH_SET_FS, 0x798260813740) = 0
+9890  set_tid_address(0x798260813a10)   = 9890
+9890  set_robust_list(0x798260813a20, 24) = 0
+9890  rseq(0x798260814060, 0x20, 0, 0x53053053) = 0
+9890  mprotect(0x7982607ff000, 16384, PROT_READ) = 0
+9890  mprotect(0x6069d4f58000, 4096, PROT_READ) = 0
+9890  mprotect(0x798260865000, 8192, PROT_READ) = 0
+9890  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+9890  munmap(0x798260816000, 66251)     = 0
+9890  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x798260813a10) = 9891
+9891  set_robust_list(0x798260813a20, 24 <unfinished ...>
+9890  exit_group(0 <unfinished ...>
+9891  <... set_robust_list resumed>)    = 0
+9890  <... exit_group resumed>)         = ?
+9891  setsid()                          = 9891
+9890  +++ exited with 0 +++
+9891  umask(000)                        = 002
+9891  close(0)                          = 0
+9891  close(1)                          = 0
+9891  close(2)                          = 0
+9891  getrandom("\x2f\x7f\x91\x49\x70\x39\x80\x34", 8, GRND_NONBLOCK) = 8
+9891  brk(NULL)                         = 0x6069f1bfd000
+9891  brk(0x6069f1c1e000)               = 0x6069f1c1e000
+9891  openat(AT_FDCWD, "daemon.pid", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 0
+9891  getpid()                          = 9891
+9891  fstat(0, {st_mode=S_IFREG|0666, st_size=0, ...}) = 0
+9891  write(0, "9891", 4)               = 4
+9891  close(0)                          = 0
+9891  openat(AT_FDCWD, "daemon.conf", O_RDONLY) = 0
+9891  fstat(0, {st_mode=S_IFREG|0664, st_size=29, ...}) = 0
+9891  read(0, "SIGHUP\nSIGUSR1\nSIGTERM\nSIGINT", 4096) = 29
+9891  read(0, "", 4096)                 = 0
+9891  close(0)                          = 0
+9891  rt_sigaction(SIGHUP, {sa_handler=0x6069d4f56798, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGTERM, {sa_handler=0x6069d4f567d6, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGINT, {sa_handler=0x6069d4f56820, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGILL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGTRAP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGABRT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGBUS, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGFPE, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGKILL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = -1 EINVAL (Недопустимый аргумент)
+9891  rt_sigaction(SIGUSR1, {sa_handler=0x6069d4f56820, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGSEGV, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGUSR2, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGPIPE, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGSTKFLT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGCONT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGSTOP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = -1 EINVAL (Недопустимый аргумент)
+9891  rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGURG, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGXCPU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGXFSZ, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGVTALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGPROF, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGWINCH, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGIO, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGPWR, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGSYS, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_2, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_3, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_4, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_5, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_6, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_7, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_8, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_9, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_10, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_11, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_12, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_13, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_14, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_15, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_16, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_17, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_18, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_19, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_20, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_21, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_22, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_23, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_24, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_25, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_26, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_27, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_28, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_29, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_30, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_31, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  rt_sigaction(SIGRT_32, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  pause()                           = ? ERESTARTNOHAND (To be restarted if no handler)
+9891  --- SIGUSR1 {si_signo=SIGUSR1, si_code=SI_USER, si_pid=9945, si_uid=1000} ---
+9891  openat(AT_FDCWD, "/etc/localtime", O_RDONLY|O_CLOEXEC) = 0
+9891  fstat(0, {st_mode=S_IFREG|0644, st_size=1321, ...}) = 0
+9891  fstat(0, {st_mode=S_IFREG|0644, st_size=1321, ...}) = 0
+9891  read(0, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\r\0\0\0\0"..., 4096) = 1321
+9891  lseek(0, -803, SEEK_CUR)          = 518
+9891  read(0, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\r\0\0\0\0"..., 4096) = 803
+9891  close(0)                          = 0
+9891  openat(AT_FDCWD, "daemon.log", O_WRONLY|O_CREAT|O_APPEND, 0644) = 0
+9891  write(0, "[2025-03-17 13:55:47] Received s"..., 66) = 66
+9891  close(0)                          = 0
+9891  rt_sigaction(SIGUSR1, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x798260645330}, NULL, 8) = 0
+9891  getpid()                          = 9891
+9891  kill(9891, SIGUSR1)               = 0
+9891  rt_sigreturn({mask=[]})           = -1 EINTR (Прерван системный вызов)
+9891  --- SIGUSR1 {si_signo=SIGUSR1, si_code=SI_USER, si_pid=9891, si_uid=1000} ---
+9891  +++ killed by SIGUSR1 +++
